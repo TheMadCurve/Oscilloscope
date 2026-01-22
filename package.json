@@ -18,14 +18,14 @@
     "twitch",
     "youtube"
   ],
-  "author": "Your Name",
+  "author": "TheMadCurve",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/oscilloscope-camera-effect.git"
+    "url": "https://github.com/themadcurve/oscilloscope-camera-effect.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/oscilloscope-camera-effect/issues"
+    "url": "https://github.com/themadcurve/oscilloscope-camera-effect/issues"
   },
-  "homepage": "https://github.com/yourusername/oscilloscope-camera-effect#readme"
+  "homepage": "https://github.com/themadcurve/oscilloscope-camera-effect#readme"
 }
