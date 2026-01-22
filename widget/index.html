@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscilloscope Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <canvas id="effectCanvas"></canvas>
+        <video id="sourceVideo" autoplay playsinline></video>
+        <div id="loading">
+            <div class="loading-content">
+                <div class="loader"></div>
+                <p>Waiting for camera...</p>
+                <p class="hint">Start camera from control dock</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

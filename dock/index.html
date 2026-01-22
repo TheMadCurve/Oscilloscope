@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscilloscope Controls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 OSCILLOSCOPE EFFECT</h1>
+            <div class="connection-status">
+                <span id="status-indicator" class="status-dot disconnected"></span>
+                <span id="status-text">Disconnected</span>
+            </div>
+        </header>
+
+        <section class="connection-section">
+            <h2>WebSocket Connection</h2>
+            <div class="input-group">
+                <label for="ws-host">Host:</label>
+                <input type="text" id="ws-host" value="127.0.0.1" placeholder="127.0.0.1">
+            </div>
+            <div class="input-group">
+                <label for="ws-port">Port:</label>
+                <input type="text" id="ws-port" value="8080" placeholder="8080">
+            </div>
+            <button id="connect-btn" class="btn btn-primary">Connect</button>
+        </section>
+
+        <section class="camera-section">
+            <h2>Camera Settings</h2>
+            <div class="input-group">
+                <label for="camera-select">Camera Device:</label>
+                <select id="camera-select">
+                    <option value="">Loading cameras...</option>
+                </select>
+            </div>
+            <button id="start-camera-btn" class="btn btn-success">START CAMERA</button>
+            <button id="stop-camera-btn" class="btn btn-danger" disabled>STOP CAMERA</button>
+            <div id="camera-status" class="status-message">Select a camera to begin</div>
+        </section>
+
+        <section class="controls-section">
+            <h2>Effect Controls</h2>
+            
+            <div class="control-group">
+                <h3>Colors</h3>
+                <div class="input-group">
+                    <label for="phosphor-color">Phosphor Color:</label>
+                    <input type="color" id="phosphor-color" value="#00ff00">
+                </div>
+                <div class="input-group">
+                    <label for="bg-color">Background:</label>
+                    <input type="color" id="bg-color" value="#001100">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Effect Intensity</h3>
+                <div class="input-group">
+                    <label for="edge-intensity">
+                        Edge Detection: <span id="edge-value">3.0</span>
+                    </label>
+                    <input type="range" id="edge-intensity" min="0" max="10" value="3" step="0.1">
+                </div>
+                <div class="input-group">
+                    <label for="glow-intensity">
+                        Glow Intensity: <span id="glow-value">20</span>
+                    </label>
+                    <input type="range" id="glow-intensity" min="0" max="50" value="20" step="1">
+                </div>
+                <div class="input-group">
+                    <label for="scanline-strength">
+                        Scanline Strength: <span id="scanline-value">0.30</span>
+                    </label>
+                    <input type="range" id="scanline-strength" min="0" max="1" value="0.3" step="0.05">
+                </div>
+                <div class="input-group">
+                    <label for="grid-opacity">
+                        Grid Opacity: <span id="grid-value">0.30</span>
+                    </label>
+                    <input type="range" id="grid-opacity" min="0" max="1" value="0.3" step="0.05">
+                </div>
+                <div class="input-group">
+                    <label for="brightness">
+                        Brightness: <span id="brightness-value">1.2</span>
+                    </label>
+                    <input type="range" id="brightness" min="0.5" max="3" value="1.2" step="0.1">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Toggle Features</h3>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="show-grid" checked>
+                        Show Grid
+                    </label>
+                    <label>
+                        <input type="checkbox" id="show-scanlines" checked>
+                        Show Scanlines
+                    </label>
+                    <label>
+                        <input type="checkbox" id="edge-detection" checked>
+                        Edge Detection
+                    </label>
+                    <label>
+                        <input type="checkbox" id="phosphor-glow" checked>
+                        Phosphor Glow
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="preset-section">
+            <h2>Presets</h2>
+            <div class="preset-buttons">
+                <button class="btn btn-secondary preset-btn" data-preset="classic">Classic Green</button>
+                <button class="btn btn-secondary preset-btn" data-preset="amber">Amber CRT</button>
+                <button class="btn btn-secondary preset-btn" data-preset="blue">Blue Monitor</button>
+                <button class="btn btn-secondary preset-btn" data-preset="vector">Vector Display</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>v1.0.0 | Oscilloscope Camera Effect</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
