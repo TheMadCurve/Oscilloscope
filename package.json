@@ -1,0 +1,31 @@
+{
+  "name": "oscilloscope-camera-effect",
+  "version": "1.0.0",
+  "description": "Oscilloscope/CRT monitor effect for OBS camera with Streamer.bot integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "obs",
+    "streamer.bot",
+    "oscilloscope",
+    "camera",
+    "effect",
+    "crt",
+    "filter",
+    "streaming",
+    "twitch",
+    "youtube"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/oscilloscope-camera-effect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/oscilloscope-camera-effect/issues"
+  },
+  "homepage": "https://github.com/yourusername/oscilloscope-camera-effect#readme"
+}
